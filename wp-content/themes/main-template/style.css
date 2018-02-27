@@ -1,0 +1,381 @@
+.pagewidth {
+  /*max-width: 1350px;*/
+}
+
+.header {
+  padding: 12px 90px 0 90px;
+  background: #00aced;
+}
+
+.crypto-description {
+  margin: 100px 0 70px 0;
+}
+
+.Buy-and-Sell-Bitcoin {
+  /*width: 770px;*/
+  height: 49px;
+  font-family: ProximaNova;
+  font-size: 40px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.Cryptoshop-is-an-ove {
+  /*width: 770px;*/
+  height: 90px;
+  font-family: ProximaNova;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.main-container {
+  background: #00aced;
+  padding-bottom: 100px;
+}
+.Cryptoshop-is-an-ove .text-style-1 {
+  font-weight: bold;
+}
+
+ul#menu-main-menu {
+  list-style-type: none;
+  text-align: center;
+  display: inline-block;
+}
+
+#site-navigation {
+  text-align: center;
+}
+
+ul#menu-main-menu li {
+  float: left;
+  padding: 0 15px 0 15px;
+}
+
+#menu-main-menu a {
+  font-family: ProximaNova;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.currency-box {
+  /*width: 370px;*/
+  height: 170px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px 0 rgba(55, 71, 79, 0.24);
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+}
+
+.currency-box .currency-img {
+  text-align: center;
+  vertical-align: middle;
+  /*position: absolute;*/
+  /*top: 25%;*/
+}
+
+.second-container {
+  background-color: #fafafa;
+}
+.crypto-howwork, .why-crypto, .others, .booking {
+  padding: 60px 0 60px 0;
+}
+
+.exchange-box, .exchange-description {
+  /*width: 550px;*/
+  height: 380px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px 0 rgba(55, 71, 79, 0.12);
+}
+
+.exchange-description {
+  /*margin: 0 100px 0 15px;*/
+  padding: 25px;
+}
+
+.exchange-box {
+  /*margin: 0 15px 0 100px;*/
+}
+
+.switch-currency, .exchange-header {
+  height: 70px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(55, 71, 79, 0.12);
+}
+
+.Buy-BTC, .Buy-ETH {
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1565c0;
+  line-height: 4;
+  cursor: pointer;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.fullwidth{
+  width: 100%;
+}
+
+.Buy-BTC:hover, .Buy-ETH:hover, .selected-currency {
+  border-bottom: solid 2px #1565c0;
+}
+
+.exchange-exe {
+  margin-top: 15px;
+  padding: 20px;
+}
+
+.Keywords {
+  font-family: ProximaNova;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #475962;
+}
+
+#btc-buy, #usd-pay {
+  width: 80%;
+  padding: 10px;
+  border-radius: 4px 0 0 4px;
+}
+
+.coin-symbol, .usd-symbol {
+  width: 20%;
+  text-align: center;
+  height: 46px;
+  line-height: 40px;
+  border: 1px solid #ced4da;
+  border-left: 0;
+  border-radius: 0 4px 4px 0;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #475962;
+}
+
+#exchangebtn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #1565c0;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.exchange-header {
+  height: 55px;
+  box-shadow: none;
+}
+
+.exchange-header span {
+  font-family: ProximaNova;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1565c0;
+}
+
+.oval {
+  width: 45px;
+  height: 45px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+  box-shadow: 0 1px 4px 0 rgba(55, 71, 79, 0.12);
+  font-family: ProximaNova;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 45px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1565c0;
+  text-align: center;
+}
+
+.step-text {
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #37474f;
+}
+
+.separate {
+  width: 2px;
+  height: 40px;
+  position: relative;
+  border: solid 1px #1565c0;
+  left: 20px;
+  margin: 5px 0 5px 0;
+}
+
+.exchange-steps {
+  margin-left: 30px;
+}
+
+.why-crypto .h4, .others .h4 {
+  font-family: ProximaNova;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1565c0;
+  text-align: center;
+}
+.reason-left, .reason-right {
+  height: 160px;
+  margin: 20px 0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px 0 rgba(55, 71, 79, 0.12);
+}
+
+.reason-left {
+  margin-left: 40px;
+}
+
+.reason-left .row, .reason-right .row {
+  margin: 0;
+  padding: 0;
+}
+
+.reason-right {
+  margin-right: 40px;
+}
+
+.reason-left .image, .reason-right .image {
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.phrase {
+  padding-top: 20px;
+  font-family: ProximaNova;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #78909c;
+}
+
+.phrase .h5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #37474f;
+}
+
+.txtcenter {
+  text-align: center;
+}
+
+.list-currency {
+  margin-top: 60px;
+}
+
+.booking {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.booking .h4 {
+  font-family: ProximaNova;
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.bookbtn {
+  width: 370px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1565c0;
+}
+
+.disable {
+  color: gray;
+}
+
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/webfonts/ProximaNovaA-Regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
