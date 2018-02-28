@@ -34,12 +34,13 @@
                 print "<div class=\"currency-box row\">";
                 print "<div class=\"col-lg-5 col-md-5 currency-img \">";
                 $img = _getPostFeaturedImg($post->ID);
-                print "<img class=\"img-responsive\" src=\"{$img}\">";
+                print "<img class=\"img-responsive coin-icon\" src=\"{$img}\">";
                 print "</div>";
                 print "<div class=\"col-lg-7 col-md-7\">";
                 print "<div class='intro-coin-box'>";
                 print "<p>" . get_category(30)->name . "</p>";
                 print "<p>{$post->post_content}</p>";
+                print "<p class='load-price-{$post->post_name}'></p>";
                 print "</div>";
                 print "</div>";
                 print "</div>";
@@ -66,12 +67,12 @@
             <div class="row">
               <div class="col-lg-6 col-md-6" style="padding-right: 0;">
                 <div class=" Buy-BTC selected-currency" id="selectBtc" onclick="switchToCurrency(true);">
-                  Buy BTC<i class="fas fa-btc"></i>
+                  Buy BTC<i class="fa fa-btc"></i>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6" style="padding-left: 0;">
                 <div class=" Buy-ETH disable" id="selectEth"  onclick="switchToCurrency(false);">
-                  Buy Ether<i class="fas fa-ethereum"></i>
+                  Buy Ether<i class="fa fa-ethereum"></i>
                 </div>
               </div>
               <div class="clearfix"></div>
@@ -236,22 +237,15 @@ function _getPostFeaturedImg($aPostID, $aImgType = 'single-post-thumbnail') {
 <script type="text/javascript">
   var jQuery = jQuery.noConflict();
   jQuery(document).ready(function() {
-    jQuery('#btc-buy').keyup(function() {
-      var tgVal = jQuery(this);
+    jQuery('#btc-buy').on( "keyup keydown change", function(){
+      var tgVal = jQuery(this).val();
+      var sellCoin = (jQuery('#curExc').val() == 1) ? 'sell-btc' : 'sell-eth';
 
-      var currency = jQuery('#curExc').val();
-      var urlDir = (currency == 1) ? 'bitcoin/' : 'ethereum/';
-
-      jQuery.ajax({
-        method: 'GET',
-        url: 'https://api.coinmarketcap.com/v1/ticker/' + urlDir + '/',
-        success: function (response) {
-          var rate = response[0]['price_usd'];
-          var usdVal = tgVal.val() * rate;
-          jQuery('#usd-pay').val(usdVal);
-        },
-      });
+      getCoinPrice(sellCoin, 'exchange', tgVal);
     });
+
+    getCoinPrice('sell-btc');
+    getCoinPrice('sell-eth');
   });
 
   function switchToCurrency(aIsBtc) {
@@ -263,7 +257,7 @@ function _getPostFeaturedImg($aPostID, $aImgType = 'single-post-thumbnail') {
         .addClass('disable');
       jQuery('#selectBtc')
         .addClass('selected-currency')
-        .removeClass('disable');;
+        .removeClass('disable');
       jQuery('.coin-symbol').text('BTC');
     } else {
       curExc.val(2);
@@ -282,5 +276,38 @@ function _getPostFeaturedImg($aPostID, $aImgType = 'single-post-thumbnail') {
   function clearVal() {
     jQuery('#btc-buy').val(0);
     jQuery('#usd-pay').val(0);
+  }
+
+  function _getCoinPrice(aUrl, aCoinType, aMode, aVal) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          if (xhr.status == 200) {
+            var data = JSON.parse(xhr.responseText);
+            if (aMode) {
+              var usdVal = aVal * data.ask;
+              jQuery('#usd-pay').val(usdVal);
+            }else {
+              if (aCoinType == 'sell-btc') {
+                jQuery('.load-price-sell-bitcoin').html(data.ask);
+              } else {
+                jQuery('.load-price-sell-eth').html(data.ask);
+              }
+            }
+          }
+        }
+    }
+    xhr.open('GET', aUrl, true);
+    xhr.send(null);
+  }
+
+  function getCoinPrice(aCoinType, aMode, aVal) {
+    if (aCoinType == 'sell-btc') {
+      var url = "https://api.gemini.com/v1/pubticker/btcusd";
+    } else {
+      var url = "https://api.gemini.com/v1/pubticker/ethusd";
+    }
+
+    _getCoinPrice(url, aCoinType, aMode, aVal);
   }
 </script>

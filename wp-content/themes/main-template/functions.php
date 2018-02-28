@@ -288,11 +288,7 @@ function maintemplate_scripts() {
 	) );
 
   // fontsawesome
-  wp_enqueue_style( 'maintemplate-fontawesome-all', get_template_directory_uri() . '/css/fontawesome-all.css', array(), '2.0' );
-  wp_enqueue_style( 'maintemplate-fa-brands', get_template_directory_uri() . '/css/fa-brands.min.css', array(), '2.0' );
-  wp_enqueue_style( 'maintemplate-fa-regular', get_template_directory_uri() . '/css/fa-regular.min.css', array(), '2.0' );
-  wp_enqueue_style( 'maintemplate-fa-solid', get_template_directory_uri() . '/css/fa-solid.min.css', array(), '2.0' );
-  wp_enqueue_style( 'maintemplate-fontawesome', get_template_directory_uri() . '/css/fontawesome.css', array(), '2.0' );
+  wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'maintemplate_scripts' );
 
