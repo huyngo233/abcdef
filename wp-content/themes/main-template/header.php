@@ -18,6 +18,6 @@
     <!--[if lt IE 9]>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
     <![endif]-->
-    <script defer src="/static/fontawesome/fontawesome-all.js"></script>
+<!--    <script defer src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/js/fontawesome-all.js"></script>-->
     <?php wp_head(); ?>
   </head>

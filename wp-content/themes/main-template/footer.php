@@ -10,25 +10,25 @@
  */
 ?>
 
-	</div><!-- .site-content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php
-				/**
-				 * Fires before the Twenty Fifteen footer text for footer customization.
-				 *
-				 * @since Twenty Fifteen 1.0
-				 */
-				do_action( 'maintemplate_credits' );
-			?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'maintemplate' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'maintemplate' ), 'WordPress' ); ?></a>
-		</div><!-- .site-info -->
-	</footer><!-- .site-footer -->
-
-</div><!-- .site -->
-
-<?php wp_footer(); ?>
-
-</body>
+    <footer id="main-footer" class="container-fluid site-footer" role="contentinfo">
+      <div class="site-info row">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-5 col-md-5">
+          <div class="footer-logo">
+            <img src="<?=wp_get_attachment_image_src(get_post_thumbnail_id(183), 'single-post-thumbnail')[0];?>"/>
+          </div>
+          <div class="footer-logo">
+            <?=get_post(183)->post_content;?>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5">
+          <?php
+            print do_shortcode(get_post(189)->post_content);
+          ?>
+        </div>
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="clearfix"></div>
+      </div><!-- .site-info -->
+    </footer><!-- .site-footer -->
+  </body>
 </html>

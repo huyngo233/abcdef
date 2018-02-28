@@ -102,7 +102,7 @@ ul#menu-main-menu li {
 .second-container {
   background-color: #fafafa;
 }
-.crypto-howwork, .why-crypto, .others, .booking {
+.crypto-howwork, .why-crypto, .others, .booking, #main-footer {
   padding: 60px 0 60px 0;
 }
 
@@ -367,6 +367,19 @@ ul#menu-main-menu li {
   color: gray;
 }
 
+#main-footer {
+  position: relative;
+  height: 150px;
+}
+
+#main-footer .row {
+  margin: 0;
+  padding: 0;
+}
+
+#main-footer .cnss-social-icon {
+
+}
 
 @font-face {
   font-family: 'ProximaNova';
