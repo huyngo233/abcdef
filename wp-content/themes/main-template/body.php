@@ -207,13 +207,6 @@
     </div>
   </div>
 
-  <!--  Footer-->
-  <?php
-
-  print do_shortcode(get_post(189)->post_content);
-  ?>
-</body>
-
 <?php
 
 function _getAllPostByCate($aCateId, $aParams = array('orderby' => 'ID', 'order' => 'ASC')) {

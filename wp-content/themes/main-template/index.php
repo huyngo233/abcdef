@@ -13,9 +13,10 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-?>
 
-<?php get_header(); ?>
-<?php get_body(); ?>
-</html>
-<?php get_footer(); ?>
+
+get_header();
+get_body();
+get_footer();
+
+?>
