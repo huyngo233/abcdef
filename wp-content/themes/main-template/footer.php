@@ -15,7 +15,9 @@
         <div class="col-lg-1 col-md-1"></div>
         <div class="col-lg-5 col-md-5">
           <div class="footer-logo">
-            <img src="<?=wp_get_attachment_image_src(get_post_thumbnail_id(183), 'single-post-thumbnail')[0];?>"/>
+            <a href="<?=get_home_url()?>">
+              <img src="<?=wp_get_attachment_image_src(get_post_thumbnail_id(183), 'single-post-thumbnail')[0];?>"/>
+            </a>
           </div>
           <div class="footer-logo">
             <?=get_post(183)->post_content;?>

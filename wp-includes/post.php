@@ -6362,3 +6362,19 @@ function _filter_query_attachment_filenames( $clauses ) {
 
 	return $clauses;
 }
+
+function _getAllPostByCate($aCateId, $aParams = array('orderby' => 'ID', 'order' => 'ASC')) {
+
+  $args = array('category' => $aCateId);
+
+  foreach ($aParams as $k => $v) {
+    $args[$k] = $v;
+  }
+  $myposts = get_posts($args);
+
+  return $myposts;
+}
+
+function _getPostFeaturedImg($aPostID, $aImgType = 'single-post-thumbnail') {
+  return wp_get_attachment_image_src(get_post_thumbnail_id($aPostID), $aImgType)[0];
+}

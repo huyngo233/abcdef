@@ -69,6 +69,31 @@ function get_body( $name = null ) {
 /**
  * @param null $name
  */
+function get_bodyheader( $name = null ) {
+  /**
+   * Fires before the header template file is loaded.
+   *
+   * @since 2.1.0
+   * @since 2.8.0 $name parameter added.
+   *
+   * @param string|null $name Name of the specific header file to use. null for the default header.
+   */
+  do_action( 'get_bodyheader', $name );
+
+  $templates = array();
+  $name = (string) $name;
+  if ( '' !== $name ) {
+    $templates[] = "bodyheader-{$name}.php";
+  }
+
+  $templates[] = 'bodyheader.php';
+
+  locate_template( $templates, true );
+}
+
+/**
+ * @param null $name
+ */
 function get_mainmenu( $name = null ) {
   /**
    * Fires before the header template file is loaded.

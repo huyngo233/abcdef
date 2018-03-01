@@ -12,7 +12,7 @@
 
 <div class="row header">
   <div class="col-lg-6">
-    <a href="#">
+    <a href="<?=get_home_url()?>">
       <img src="<?=get_template_directory_uri()?>/img/logo.png">
     </a></div>
   <div class="col-lg-6">
