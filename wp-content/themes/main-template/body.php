@@ -23,12 +23,12 @@
           <div class="switch-currency">
             <div class="row">
               <div class="col-lg-6 col-md-6" style="padding-right: 0;">
-                <div class=" Buy-BTC selected-currency" id="selectBtc" onclick="switchToCurrency(true);">
+                <div class=" Buy-BTC selected-currency" id="selectBtc" data-is-btc="1">
                   Buy BTC<i class="fa fa-btc"></i>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6" style="padding-left: 0;">
-                <div class=" Buy-ETH disable" id="selectEth"  onclick="switchToCurrency(false);">
+                <div class=" Buy-ETH disable" id="selectEth" data-is-btc="0">
                   Buy Ether<i class="fa fa-ethereum"></i>
                 </div>
               </div>

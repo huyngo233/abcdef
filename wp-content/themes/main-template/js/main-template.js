@@ -23,9 +23,11 @@ jQuery(function($){
   getCoinPrice('sell-btc');
   getCoinPrice('sell-eth');
 
-  function switchToCurrency(aIsBtc) {
+  $('#selectBtc, #selectEth').on('click', function() {
+    var isbtc = $(this).data('is-btc');
+
     var curExc = $('#curExc');
-    if (aIsBtc) {
+    if (isbtc ) {
       curExc.val(1);
       $('#selectEth')
         .removeClass('selected-currency')
@@ -46,7 +48,7 @@ jQuery(function($){
     }
 
     clearVal();
-  }
+  });
 
   function clearVal() {
     $('#btc-buy').val(0);
