@@ -42,7 +42,7 @@
                 <div class="form-group">
                   <label for="btc-buy" class="Keywords">You want to buy:</label>
                   <div>
-                    <input type="number" name="buybtc" class="form-control left" id="btc-buy" value="0">
+                    <input type="tel" name="buybtc" class="form-control left" id="btc-buy">
                     <div class="right coin-symbol">BTC</div>
                     <div class="clearfix"></div>
                   </div>
@@ -50,8 +50,9 @@
                 <div class="form-group">
                   <label for="usd-pay" class="Keywords">You will pay:</label>
                   <div>
-                    <input type="number" name="payusd" class="form-control left" id="usd-pay"  value="0" disabled="disabled">
+                    <input type="number" name="payusd" class="form-control left" id="usd-pay" disabled="disabled">
                     <div class="right usd-symbol">USD</div>
+                    <input type="hidden" name="fFee" id="fee-usd" value="0">
                     <div class="clearfix"></div>
                   </div>
                 </div>

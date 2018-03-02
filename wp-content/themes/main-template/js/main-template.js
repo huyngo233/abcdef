@@ -6,8 +6,12 @@
  */
 
 jQuery(function($){
-  $('#btc-buy').on( "keyup keydown change", function(){
+  $('#btc-buy').on( "keyup", function(){
     var tgVal = $(this).val();
+    if (!$.isNumeric(tgVal) || tgVal < 0) {
+      clearVal();
+      return false;
+    }
     var sellCoin = ($('#curExc').val() == 1) ? 'sell-btc' : 'sell-eth';
 
     getCoinPrice(sellCoin, 'exchange', tgVal);
@@ -46,13 +50,13 @@ jQuery(function($){
         .removeClass('disable');
       $('.coin-symbol').text('ETH');
     }
-
     clearVal();
+    return false;
   });
 
   function clearVal() {
-    $('#btc-buy').val(0);
-    $('#usd-pay').val(0);
+    $('#btc-buy').val('');
+    $('#usd-pay').val('');
   }
 
   function _getCoinPrice(aUrl, aCoinType, aMode, aVal) {
@@ -64,6 +68,7 @@ jQuery(function($){
             if (aMode) {
               var usdVal = aVal * data.ask;
               $('#usd-pay').val(usdVal);
+              $('#fee-usd').val(usdVal);
             }else {
               if (aCoinType == 'sell-btc') {
                 $('.load-price-sell-bitcoin').html('$' + data.ask);
