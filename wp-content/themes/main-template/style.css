@@ -2,6 +2,11 @@
   /*max-width: 1350px;*/
 }
 
+.row {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: ProximaNova, sans-serif;
 }
@@ -133,9 +138,11 @@ ul#menu-main-menu li {
 
 .second-container {
   background-color: #fafafa;
+  padding: 0;
 }
 .crypto-howwork, .why-crypto, .others, .booking, #main-footer {
   padding: 60px 0 60px 0;
+  margin: 0;
 }
 
 .exchange-box, .exchange-description {
@@ -365,7 +372,7 @@ ul#menu-main-menu li {
 }
 
 .list-currency {
-  margin-top: 60px;
+  margin: 60px 0 0 0;
 }
 
 .booking {
@@ -494,6 +501,17 @@ ul#menu-main-menu li {
   background-color: #000000;
 }
 
+.appointMess {
+  width: 70%;
+  text-align: center;
+  padding: 20px;
+  color: red;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 5px solid red;
+  border-radius: 10px;
+}
 
 @font-face {
   font-family: 'ProximaNova';

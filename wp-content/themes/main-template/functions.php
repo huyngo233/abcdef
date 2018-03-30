@@ -421,6 +421,7 @@ function switch_to_relative_url($html, $id, $caption, $title, $align, $url, $siz
   return $html;
 }
 add_filter('image_send_to_editor','switch_to_relative_url', 10, 8);
+add_filter('show_admin_bar','__return_false');
 
 /**
  * Implement the Custom Header feature.

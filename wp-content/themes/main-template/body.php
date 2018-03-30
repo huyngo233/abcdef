@@ -25,12 +25,14 @@
               <div class="row">
                 <div class="col-lg-6 col-md-6" style="padding-right: 0;">
                   <div class=" Buy-BTC selected-currency" id="selectBtc" data-is-btc="1">
-                    Buy BTC<i class="fa fa-btc"></i>
+                    Buy BTC
+                    <img src="/cryptoShop/wp-content/uploads/2018/03/if_BTC_1175252-1.png" alt="" class="aligncenter size-full wp-image-235" />
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6" style="padding-left: 0;">
                   <div class=" Buy-ETH disable" id="selectEth" data-is-btc="0">
-                    Buy Ether<i class="fa fa-ethereum"></i>
+                    Buy Ether
+                    <img src="/cryptoShop/wp-content/uploads/2018/03/if_ETH_1175230.png" alt="" class="aligncenter size-medium wp-image-234" />
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -88,6 +90,7 @@
         <div class="col-lg-2 col-md-2"></div>
         <div class="clearfix"></div>
       </div>
+      <div><p class="appointMess"><?=get_post(226)->post_content ?></p><div>
     </div>
 
     <!--  WHY CRYPTO-->
