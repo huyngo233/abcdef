@@ -423,6 +423,14 @@ function switch_to_relative_url($html, $id, $caption, $title, $align, $url, $siz
 add_filter('image_send_to_editor','switch_to_relative_url', 10, 8);
 add_filter('show_admin_bar','__return_false');
 
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class ($classes, $item) {
+  if (in_array('current-menu-item', $classes) ){
+    $classes[] = 'active ';
+  }
+  return $classes;
+}
+
 /**
  * Implement the Custom Header feature.
  *

@@ -5,7 +5,13 @@
  * Contains handlers for navigation and widget area.
  */
 
-jQuery(function($){
+jQuery(function($) {
+  var url = window.location.hash.substr(1);
+  if (url == 'howitwork') {
+    scrollToHIW();
+    $('#menu-main-menu .move-to-hiw').removeClass('active');
+  }
+
   $('#btc-buy').on( "keyup", function(){
     var tgVal = $(this).val();
     if (!$.isNumeric(tgVal) || tgVal < 0) {
@@ -18,11 +24,15 @@ jQuery(function($){
   });
 
   $('#menu-main-menu .move-to-hiw').on('click', function () {
-    $('html, body').animate({
-       scrollTop: $(".second-container").offset().top
-    }, 750);
+    scrollToHIW();
     return false;
   });
+
+  function scrollToHIW() {
+    $('html, body').animate({
+      scrollTop: $(".second-container").offset().top
+    }, 750);
+  }
 
   getCoinPrice('sell-btc');
   getCoinPrice('sell-eth');

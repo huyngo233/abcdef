@@ -80,7 +80,7 @@ ul#menu-main-menu li {
   color: #FFFFFF;
 }
 
-#menu-main-menu a:hover {
+#menu-main-menu a:hover, #menu-main-menu .active a {
   padding-bottom: 5px;
   border-bottom: 2px solid #fff;
   text-decoration: none;
